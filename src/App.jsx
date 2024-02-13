@@ -3,14 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { FormSeries } from './components/FormSeries'
+import { AppTheme } from './theme/AppTheme'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <AppTheme>
       <FormSeries/>
-    </>
+    </AppTheme>
   )
 }
 

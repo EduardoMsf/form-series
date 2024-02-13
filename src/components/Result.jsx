@@ -1,6 +1,11 @@
+import { Grid, Typography } from '@mui/material'
 
-export const Result = () => {
+export const Result = ({resultado}) => {
   return (
-    <div>Resultado: </div>
+    <Grid>
+      <Typography variant="p">
+       Resultado: {resultado}
+      </Typography>
+    </Grid>
   )
 }

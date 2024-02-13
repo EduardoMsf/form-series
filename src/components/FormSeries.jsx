@@ -3,6 +3,8 @@ import { Result } from "./Result"
 import { calcularTermino } from '../shared/logicSeries';
 import { useState } from "react";
 
+import { FormControl } from '@mui/material';
+
 
 export const FormSeries = () => {
     
@@ -26,7 +28,8 @@ export const FormSeries = () => {
           />
         <button type="submit">Calcular</button>
       </form>
-         Resultado: {termino}
+          <Result resultado={termino} />
+          
     </div>
   );
 }
