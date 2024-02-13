@@ -16,7 +16,11 @@ export const  useSingularSeries = () => {
     const fibonacci = (numero)  =>{}
 
     // Calcular la SNGULAR Serie
-    const calcularTermino = (numero)  =>{}
+    const calcularTermino = (numero) => {
+        //prueba del funcionamiento del hook
+        const aux = 5
+        return  aux
+    }
 
     return { serie, calcularTermino };
 }
