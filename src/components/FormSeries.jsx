@@ -1,23 +1,18 @@
 import { useSingularSeries } from "../hooks/useSngularSeries"
 import { Result } from "./Result"
+import { calcularTermino } from '../shared/logicSeries';
 
 
 export const FormSeries = () => {
-
-    const {termino } = useSingularSeries();
-
-
-    //  const handleClick = () => {
-    //     calcularTermino();
-    // };
-
+    
+    // const exp = calcularTermino(1)
+    const val = calcularTermino(3)
 
     return (
         <div>
             FormSeries Component
-             {/* <button onClick={handleClick}>Actualizar Número</button> */}
-            <div>Número actual: n</div>
-            <div>Término calculado: {termino}</div>
+            <div>
+            </div>
             <Result/>
         </div>
     )
