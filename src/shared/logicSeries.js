@@ -44,11 +44,5 @@ function fibonacci(n) {
 export function calcularTermino(n) {
 
   const term = (getPrimo(n + 3) * getTriangular(n - 1)) / fibonacci(n - 2);
-  // let aux1 = getPrimo(n + 3)
-  // let aux2 = getTriangular(n - 1);
-  let aux3 = fibonacci(n - 2)
-  // console.log(aux1)
-  // console.log(aux2)
-  // console.log(aux3)
-  console.log(term)
+  return term
 }
