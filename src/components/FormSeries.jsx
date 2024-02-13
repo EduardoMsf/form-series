@@ -4,15 +4,20 @@ import { Result } from "./Result"
 
 export const FormSeries = () => {
 
-    const { calcularTermino } = useSingularSeries()
+    const {termino } = useSingularSeries();
 
-    const respHook = calcularTermino(1)
+
+    //  const handleClick = () => {
+    //     calcularTermino();
+    // };
+
+
     return (
         <div>
             FormSeries Component
-            <div>
-                Resultado del hook:  {respHook}
-           </div>
+             {/* <button onClick={handleClick}>Actualizar Número</button> */}
+            <div>Número actual: n</div>
+            <div>Término calculado: {termino}</div>
             <Result/>
         </div>
     )
