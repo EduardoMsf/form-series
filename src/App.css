@@ -4,3 +4,30 @@
   padding: 2rem;
   text-align: center;
 }
+
+.media {
+  max-width: 430px !important;
+}
+.media-form{
+  width: 100%;
+}
+.media-font {
+  font-size:'1rem'
+}
+
+@media (min-width: 580px) {
+
+  .media {
+  max-width: 1480px !important;
+}
+
+.media-form{
+  width: 800px;
+}
+  .media-font {
+  font-size:'3rem' !important;
+}
+
+
+
+}

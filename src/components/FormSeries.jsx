@@ -1,10 +1,18 @@
 import { useState } from "react";
 
-import {TextField, Button} from '@mui/material';
+import {TextField, Button, Box} from '@mui/material';
 
 import { Result } from "./Result"
 import { useSngularSeries } from "../hooks/useSngularSeries"
 
+
+const commonStyles = {
+  bgcolor: 'background.paper',
+  m: 1,
+  border: 1,
+  pt: 3,
+  borderRadius:2
+};
 
 export const FormSeries = () => {
     
@@ -16,22 +24,25 @@ export const FormSeries = () => {
     };
     
   return (
-    <form
+    <Box xs={6} sx={{  ...commonStyles, borderColor: 'deepPurple.main'}}>
+      <form
       onSubmit={(event) => {
         handleSubmit(event, parseInt(inputValue, 10));
         setInputValue(''); 
       }}  style={{display:'flex', flexDirection:'column', alignItems:'center'}}
     >
-      < TextField
-        color="secondary"
-        sx={{width:'70%'}}
+        < TextField
+        required
+        // color="deepPurple.main"
+        sx={{width:'70%', color:"deepPurple.main" }}
         id="outlined-required"
         label="Ingresa un número"
         value={inputValue}
         onChange={handleChange}
       />
-      <Button sx={{width:'70%', m:2}}   color="primary" type="submit" variant="contained">Calcular</Button>
+      <Button sx={{width:'70%', m:2, background:"linear-gradient(to left,#C79037, #1A0907)", color:"#fff"}}   color="primary" type="submit" variant="contained">Calcular</Button>
       <Result resultado={termino} />
     </form>
+    </Box>
   );
 }
