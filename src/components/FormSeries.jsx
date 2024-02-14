@@ -1,9 +1,9 @@
-import { useSngularSeries } from "../hooks/useSngularSeries"
-import { Result } from "./Result"
-import { calcularTermino } from '../shared/logicSeries';
 import { useState } from "react";
 
-import { FormControl } from '@mui/material';
+import {TextField, Button} from '@mui/material';
+
+import { Result } from "./Result"
+import { useSngularSeries } from "../hooks/useSngularSeries"
 
 
 export const FormSeries = () => {
@@ -16,20 +16,22 @@ export const FormSeries = () => {
     };
     
   return (
-    <div>
-        <form onSubmit={(event) => {
-          handleSubmit(event, parseInt(inputValue, 10));
-          setInputValue(''); // Reiniciar el campo de input después del cálculo
-        }}>
-          <input
-            type="text"
-            value={inputValue}
-            onChange={handleChange}
-          />
-        <button type="submit">Calcular</button>
-      </form>
-          <Result resultado={termino} />
-          
-    </div>
+    <form
+      onSubmit={(event) => {
+        handleSubmit(event, parseInt(inputValue, 10));
+        setInputValue(''); 
+      }}  style={{display:'flex', flexDirection:'column', alignItems:'center'}}
+    >
+      < TextField
+        color="secondary"
+        sx={{width:'70%'}}
+        id="outlined-required"
+        label="Ingresa un número"
+        value={inputValue}
+        onChange={handleChange}
+      />
+      <Button sx={{width:'70%', m:2}}   color="primary" type="submit" variant="contained">Calcular</Button>
+      <Result resultado={termino} />
+    </form>
   );
 }

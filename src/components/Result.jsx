@@ -1,11 +1,11 @@
-import { Grid, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 export const Result = ({resultado}) => {
   return (
-    <Grid>
+    <Box component="section" sx={{ p: 2}} >
       <Typography variant="p">
        Resultado: {resultado}
       </Typography>
-    </Grid>
+   </Box>
   )
 }
