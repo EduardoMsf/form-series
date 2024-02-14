@@ -21,8 +21,7 @@ export const FormSeries = () => {
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
-    };
-    
+  }
   return (
     <Box xs={6} sx={{  ...commonStyles, borderColor: 'deepPurple.main'}}>
       <form
@@ -41,7 +40,7 @@ export const FormSeries = () => {
         onChange={handleChange}
       />
       <Button sx={{width:'70%', m:2, background:"linear-gradient(to left,#C79037, #1A0907)", color:"#fff"}}   color="primary" type="submit" variant="contained">Calcular</Button>
-      <Result resultado={termino} />
+        <Result resultado={termino} inputValue={inputValue} />
     </form>
     </Box>
   );
