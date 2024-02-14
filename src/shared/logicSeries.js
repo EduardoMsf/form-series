@@ -29,7 +29,8 @@ function getTriangular(n) {
 
 // Back to UPIITA 1er semestre xd
 function fibonacci(n) {
-  if (n <= 1) return n;
+  if (n <= 0) return 0; // Si n es menor o igual a 0, retornar 0
+  if (n === 1) return 1;
   let a = 0, b = 1;
   for (let i = 2; i <= n; i++) {
     let temp = b;
@@ -44,5 +45,6 @@ function fibonacci(n) {
 // Calcular la SNGULAR Serie
 export function calcularTermino(n) {
   const term = (getPrimo(n + 3) * getTriangular(n - 1)) / fibonacci(n - 2);
+  console.log('result', term)
   return term
 }

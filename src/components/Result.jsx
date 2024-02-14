@@ -1,11 +1,12 @@
 import { Box, Typography } from '@mui/material'
 
-export const Result = ({resultado}) => {
+export const Result = ({ resultado }) => {
+  console.log('resultadoC', resultado)
   return (
     <Box component="section" sx={{ p: 2}} xs={6}>
       <Typography variant="p" sx={{fontSize:'1.5rem'}}>
         { isNaN(resultado) || resultado == null ?
-          'Resultado'
+          'Resultado:'
           : `Resultado: ${resultado}`        
        }
       </Typography>
